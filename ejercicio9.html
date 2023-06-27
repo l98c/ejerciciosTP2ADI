@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 300px;
+      margin: 20px auto;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-bottom: 10px;
+    }
+
+    .grupo-form{
+        margin: 5px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin-top: 3px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="reset"] {
+      background-color: #f44336;
+    }
+  </style>
+<body>
+    <h1>Formulario</h1>
+    <div class="contenedor">
+        <form>
+            <div class="grupo-form">
+                <input type="text" id="name" class="input-field" placeholder="Nombre">
+            </div>
+            <div class="grupo-form">
+                <input type="radio" id="genero-mujer" name="genero" value="1">Mujer
+                <input type="radio" id="genero-varon" name="genero" value="2">Varón
+                <input type="radio" id="genero-otre" name="genero" value="3">Otre 
+            </div>
+            <div class="grupo-form">
+                <select name="provincia" id="prov">
+                    <option value="none">Provincia</option>
+                    <option value="mza">Mendoza</option>
+                    <option value="snjn">San Juan</option>
+                    <option value="snls">San Luis</option>
+                    <option value="bsas">Buenos Aires</option>
+                    <option value="cba">Córdoba</option>
+                </select>
+            </div>
+            <div>
+                <textarea name="campo-texto" id="txt" cols="35" rows="10" style="resize: none;"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="verificacion" id="verify">No soy un robot
+            </div>
+            <button type="submit" class="boton">Enviar</button>
+            <button type="submit" class="boton">Limpiar</button>
+        </form>
+    </div>
+</body>
+</html>
